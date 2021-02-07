@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/textview"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device_ID.xml"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/device_id_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_below="@id/textview" />
+
+            <Button
+                android:id="@+id/referesh_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Referesh"
+                android:layout_below="@id/device_id_textview" />
+
+            <LinearLayout
+                android:id="@+id/device_id_linear"
+                android:layout_margin="2.5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/referesh_button">
+
+                <Button
+                    android:id="@+id/backup_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Backup" />
+
+                <Button
+                    android:id="@+id/restore_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Restore" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/uuid_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:maxLength="32"
+                android:nextFocusLeft="@id/uuid_edittext"
+                android:nextFocusRight="@id/uuid_edittext"
+                android:nextFocusUp="@id/uuid_edittext"
+                android:nextFocusDown="@id/uuid_edittext"
+                android:layout_below="@id/device_id_linear" />
+
+            <Button
+                android:id="@+id/update_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Update"
+                android:layout_below="@id/uuid_edittext" />
+
+            <LinearLayout
+                android:id="@+id/change_linear"
+                android:layout_margin="2.5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/update_button">
+
+                <Button
+                    android:id="@+id/increment_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Increment" />
+
+                <Button
+                    android:id="@+id/decrement_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Decrement" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/random_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Random"
+                android:layout_below="@id/change_linear" />
+
+            <LinearLayout
+                android:id="@+id/nick_linear"
+                android:layout_margin="2.5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/random_button">
+
+                <Spinner
+                    android:id="@+id/nick_symbols_spinner"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="0.1"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/nick_edittext"
+                    android:gravity="center"
+                    android:nextFocusLeft="@id/nick_edittext"
+                    android:nextFocusRight="@id/nick_edittext"
+                    android:nextFocusUp="@id/nick_edittext"
+                    android:nextFocusDown="@id/nick_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/copy_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="0.1"
+                    android:text="Copy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/data_linear"
+                android:layout_margin="2.5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nick_linear">
+
+                <Button
+                    android:id="@+id/backup_data_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Backup Data" />
+
+                <Button
+                    android:id="@+id/restore_data_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Restore Data" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_linear"
+                android:layout_margin="2.5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/data_linear">
+
+                <Button
+                    android:id="@+id/detail_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Detail" />
+
+                <Button
+                    android:id="@+id/clear_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Clear"
+                    android:textColor="#FF0101" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_below="@id/detail_linear" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
